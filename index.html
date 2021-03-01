@@ -13,10 +13,22 @@
         canvas.onclick = (e) => {
         console.log(e.clientX)
         console.log(e.clientY)
-        //console.log调试大法
+        //console.log调试大法;我们点击鼠标时，就打印出位置的X轴和Y轴坐标
         let div = document.createElement('div')
+        //让文档创建一个div元素
         div.style.position = 'absolute'
-        
+        div.style.left = e.clientX + 'px'
+        div.style.top = e.clientY + 'px'
+        div.style.width = '6px'
+        div.style.height= '6px'
+        div.style.marginLeft='-3px'
+        div.style.marginTop='-3px'
+        div.style.borderRadius= '50%'
+        div.style.background = 'black'
+        canvas.appendChild(div)
+        //canvas里面添加上div，让div出现在鼠标点击的位置
+
+
         }
     </script>
 </body>
